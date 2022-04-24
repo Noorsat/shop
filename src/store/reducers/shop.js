@@ -32,10 +32,15 @@ export function shop(state = initState, action) {
         case MINUS_COUNTER:
             newState.basket = newState.basket.map(item => {
                 if (item.id === action.payload.id){
-                    item.counter -= 1;
+                    if (item.counter === 1){
+                        item.counter = 0;
+                    }else{
+                        item.counter -= 1;
+                    }
+                    
                 }
                 return item;
-            })
+            }).filter(item => item.counter !== 0)
             break;
         default:
             return state

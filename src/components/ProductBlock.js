@@ -5,6 +5,7 @@ const Box = styled('div')`
   box-sizing: border-box;
   border-radius: 8px;
   transition: .2s;
+  width: 300px;
   &:hover {
     box-shadow: 0 10px 15px 0 rgba(0,0,0,.1);
   }
@@ -32,7 +33,9 @@ export function ProductBlock({ product, onAddToBasket }) {
             <Image src={product.image} alt="" />
             <Title>{product.title}</Title>
             <Price>{product.price}$</Price>
-            <Rating name="half-rating" defaultValue={product.rating.rate} precision={0.1  } readOnly />
+            <div>
+              <Rating name="half-rating" defaultValue={product.rating.rate} precision={0.1} readOnly />
+            </div>
             <Button onClick={onAddToBasket}>Add to Basket</Button>
         </Box>
     )
