@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import {Navbar} from "./components/Navbar";
 import {MoviesPage} from "./pages/MoviesPage";
 import {MoviePage} from "./pages/MoviePage";
-import {RickAndMortyPage} from "./pages/RickAndMortyPage";
+import {RickAndMortyPage} from "./pages/RickAndMortyPage.tsx";
 import {SignInPage} from "./pages/SignInPage";
 import {Auth} from "./context/Auth";
 import {useState} from "react";

@@ -20,6 +20,7 @@
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
     "sass": "^1.49.9",
+    "typescript": "^4.6.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -29,9 +30,9 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
+    "extends": "react-app",
+    "ignorePatterns": [
+      "node_modules/"
     ]
   },
   "browserslist": {
@@ -47,6 +48,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.14.0",
     "redux-devtools-extension": "^2.13.9"
   }
 }
